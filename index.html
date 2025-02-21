@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.6.0/css/all.css">
+</head>
+<body>
+ 
+    <form>
+        <p class="title">Stax Food Admin Login</p>
+        <div class="authorization">
+        <div class="authorization__body">
+            <p class="text">Please fill in your unique admin login details below</p>
+            <div class="email">
+          <label for="exampleInputEmail1" class="email_text">Email address</label>
+          <input type="email" class="email_place" id="exampleInputEmail1" aria-describedby="emailHelp">
+        </div>
+        <div class="password__container">
+         <div class="password">
+          <label for="exampleInputPassword1" class="password_text">Password</label>
+          <div class="password_container"><input type="password" class="password_place" id="password_place">
+          <i class="fa-solid fa-eye" id="password_show"></i></div>
+         </div>
+          <a href="" class="forget">forget password?</a>
+        </div>        
+        <button type="submit" class="btn btn-primary">Sign in</button>
+        </div>  </div>
+        <script>
+          const passwordInput = document.getElementById('password_place');
+          const passwordShow = document.getElementById('password_show');
+          
+          passwordShow.addEventListener('click', function() {
+              if (passwordInput.type === 'password') {
+                  passwordInput.type = 'text';
+                  
+                  passwordShow.classList.remove('fa-eye');
+                  passwordShow.classList.add('fa-solid', 'fa-eye-slash');
+              } else {
+                  passwordInput.type = 'password';
+                  passwordShow.classList.remove('fa-eye-slash');
+                  passwordShow.classList.add('fa-solid', 'fa-eye');
+              }
+          });
+      </script>
+      </form>
+
+</body>
+</html>
